@@ -1,4 +1,5 @@
-package com.test.ecom.user.product.dto;
+package com.test.ecom.user.product.DTO;
+
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -7,22 +8,29 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 public class ProductResponse {
+
+
     private int productId;
-    private String brandCode;
     private String brandName;
-    private String categorySlug;
+    //  private String brandSlug;  // code in database //
+
+    //category table based
     private String categoryName;
-    private String subCategorySlug;
+    //  private String categorySlug;
+
+    //sub category table based
     private String subCategoryName;
+    //  private String subCategorySlug;
+
+    //product table based
     private String title;
     private String description;
-    private String productSlug;
 
-    // List of variant items
-    private List<VariantResponse> variants = new ArrayList<>();
+    // variants
+    private List<VariantResponse> vr = new ArrayList<>();
+
 }
