@@ -1,4 +1,4 @@
-package com.test.ecom.user.product.DTO;
+package com.test.ecom.product.DTO;
 
 public enum SortBy {
     PRICE ,

@@ -1,4 +1,4 @@
-package com.test.ecom.user.product.DTO;
+package com.test.ecom.product.DTO;
 
 
 import jakarta.validation.constraints.Max;

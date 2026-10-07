@@ -1,9 +1,8 @@
-package com.test.ecom.user.product;
+package com.test.ecom.product;
 
 
-import com.test.ecom.EComApplication;
-import com.test.ecom.user.product.DTO.ParamFilters;
-import com.test.ecom.user.product.DTO.ProductResponse;
+import com.test.ecom.product.DTO.ParamFilters;
+import com.test.ecom.product.DTO.ProductResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -15,19 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user/products")
+@RequestMapping("/api/v1/products")
 public class ProductController {
 
 
     private static final Logger log =
             LoggerFactory.getLogger(ProductController.class);
 
-    private ProductRepository repo ;
-    public ProductController (ProductRepository repo){
+    private UserProductRepository repo ;
+    public ProductController (UserProductRepository repo){
         this.repo=repo;
     }
 
-    @GetMapping()
+    @GetMapping("/user")
     private ResponseEntity<List<ProductResponse>> getPrd(ParamFilters filters){
 
         //param Filters filters =  new param Filters () ;

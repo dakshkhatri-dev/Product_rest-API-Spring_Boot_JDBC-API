@@ -1,13 +1,12 @@
-package com.test.ecom.user.product;
+package com.test.ecom.product;
 
 
 
-import com.test.ecom.user.product.DTO.ParamFilters;
-import com.test.ecom.user.product.DTO.ProductResponse;
-import com.test.ecom.user.product.DTO.VariantResponse;
+import com.test.ecom.product.DTO.ParamFilters;
+import com.test.ecom.product.DTO.ProductResponse;
+import com.test.ecom.product.DTO.VariantResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -18,16 +17,16 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public class ProductRepository {
+public class UserProductRepository {
 
 
     private static final Logger log =
-            LoggerFactory.getLogger(ProductRepository.class);
+            LoggerFactory.getLogger(UserProductRepository.class);
 
 
         private final NamedParameterJdbcTemplate jdbcTemplate ;
 
-         public ProductRepository(NamedParameterJdbcTemplate jdbcTemplate){
+         public UserProductRepository(NamedParameterJdbcTemplate jdbcTemplate){
              this.jdbcTemplate=jdbcTemplate;
          }
          public List<ProductResponse> getProducts(ParamFilters filters){
